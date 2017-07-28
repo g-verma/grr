@@ -7,13 +7,13 @@ function InsertUser(){
 		if (isset($_POST['sign_up']))
 		{
 			
-			$name=$_POST['u_name'];
-			$pass=$_POST['u_pass'];
-			$email=$_POST['u_email'];
-			$country=$_POST['u_country'];
-			$gender=$_POST['u_gender'];
-			$b_day=$_POST['u_birthday'];
-			$date = date("d-m-y");
+			$name=mysqli_real_escape_string($con,$_POST['u_name']);
+			$pass=mysqli_real_escape_string($con,$_POST['u_pass']);
+			$email=mysqli_real_escape_string($con,$_POST['u_email']);
+			$country=mysqli_real_escape_string($con,$_POST['u_country']);
+			$gender=mysqli_real_escape_string($con,$_POST['u_gender']);
+			$b_day=mysqli_real_escape_string($con,$_POST['u_birthday']);
+			
 			$status = "unverified";
 			$posts = "No";
 			
@@ -34,11 +34,14 @@ function InsertUser(){
 		
 // this else is used for inserting values to database and script tag is used to give popup		
 	else {
-		$insert ="insert into users (user_name,user_pass,user_email,user_country,user_gender,user_b_day,user_image,register_date,last_login,status,posts) values ('$name','$pass','$email','$country','$gender','$b_day','default.jpg','$date','$date','$status','$posts') ";	
+		$insert ="insert into users (user_name,user_pass,user_email,user_country,user_gender,user_b_day,user_image,register_date,last_login,status,posts) values ('$name','$pass','$email','$country','$gender','$b_day','default.jpg','NOW()','NOW()','$status','$posts') ";	
 		
 		$run_insert = mysqli_query($con,$insert);
 			
-			if($run_insert){ echo "<script>alert('Successfully registered')</script>"; }
+			if($run_insert){ 
+				echo "<script>alert('Successfully registered')</script>";
+				echo "<script>window.open('home.php','_self')</script>";
+				}
 		}
 		
 	
