@@ -23,9 +23,13 @@ function InsertUser(){
 	
 	if ($check==1){
 		echo "<script>alert('Pehle bhi kiya hua hai bhai, dusri email id use karo')</script>";
-		exit();	
-
-	}
+		exit();	}
+		
+	if(strlen($pass)<8){ echo "<script>alert('Minimum 8 character password')</script>";
+		exit();	}
+		
+	if(strlen($name)<5){ echo "<script>alert('Minimum 8 character username')</script>";
+		exit();	}	
 		
 	
 		}
