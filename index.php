@@ -8,32 +8,27 @@ include("functions/functions.php");
 <html >
 <head>
   <meta charset="UTF-8">
-  <title>grr media</title>
+  <title>grr new social media platform</title>
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 
   <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900'>
-<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
-
-      <link rel="stylesheet" href="css/style.css">
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="css/style.css">
 
   
 </head>
 
 <body>
-  
-<!-- Form Mixin-->
-<!-- Input Mixin-->
-<!-- Button Mixin-->
-<!-- Pen Title-->
+
 <div class="pen-title">
-  <h1>Hello world</h1>
+  <h1>Welcome to Grr</h1>
 </div>
 <!-- Form Module-->
-<div class="module-form-module">
-  <div class="toggle"><i class="fa fa-times fa-pencil"></i>
+<div class="module-form-module" style="text-align: center;">
+ <!--  <div class="toggle">
     <div class="tooltip">Sign up </div>
-  </div>
+  </div> -->
   <div class="form" id="form1">
     <h2>Login to your account</h2>
     <form action="" method="post" >
@@ -57,7 +52,7 @@ include("functions/functions.php");
 	<option>Agra</option>
       </select>
       <select name="u_gender"> 
-	<option>select your gender</option>
+	<option>Gender</option>
 	<option>male</option>
 	<option>female</option>
       </select>
@@ -66,12 +61,13 @@ include("functions/functions.php");
     </form>
 	<?php InsertUser(); ?>
   </div>
-  <div class="cta"><a href="http://andytran.me">Forgot your password?</a></div>
+  </br>
+  </br>
+  <h5> Copyright 2017 - GV</h5>
+ 
 </div>
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src='https://codepen.io/andytran/pen/vLmRVp.js'></script>
 
-    <script src="js/index.js"></script>
 
 </body>
 </html>
