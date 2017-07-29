@@ -12,7 +12,7 @@ include("includes/connection.php");
 	  <link rel="stylesheet" href="css/home_style.css" media="all" />
 </head>
 
-<body>
+<body class="main_container">
 <div class="container">
     <div id="head_wrap">
         <div id="header">

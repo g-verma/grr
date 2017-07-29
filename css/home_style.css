@@ -136,13 +136,21 @@ padding:5px;
 }
 
 .footer h5{text-align:center;}
+
+
+.main_container{
+      margin: 0px;
+    padding: 0px;
+}
+
+
 .container{
     display: block;
     height: 40px;
     width: 100%;
-    background-color: #ccc;
+    background-color: #b1de76;
     margin: 0;
-    padding: 0px;
+    padding: 5px;
 }
 #menu{
   height: 35px;
@@ -151,4 +159,18 @@ padding:5px;
 #menu li{
   display: inline;
   list-style: none;
+}
+
+#menu a{
+  margin: 5px;
+  padding:5px;
+  text-decoration: none;
+  color:gray;
+  font-size:16px;
+}
+
+#menu a:hover{
+  color:brown;
+  text-decoration: underline;
+  
 }
