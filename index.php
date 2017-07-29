@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
-<?php 
+<?php
+session_start();
 include("functions/functions.php");
 
 ?>
@@ -59,7 +60,7 @@ include("functions/functions.php");
 	<input name="u_birthday" type="date" placeholder="BOD" required="required"/>
       <button name="sign_up">Sign up</button>
     </form>
-	<?php InsertUser(); ?>
+	<?php include("user_insert.php");	?>
   </div>
   </br>
   </br>
