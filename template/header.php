@@ -26,8 +26,8 @@
   <div class="form" id="form1">
     <h2>Login to your account</h2>
     <form action="" method="post" >
-      <input type="text" placeholder="Username" required="required"/>
-      <input type="password" placeholder="Password" required="required"/>
-      <button>Login</button>
+      <input name="email" type="email" placeholder="Username/email" required="required"/>
+      <input name="pass" type="password" placeholder="Password" required="required"/>
+      <button name="login">Login</button>
     </form>
   </div>
