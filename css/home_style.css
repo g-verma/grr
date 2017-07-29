@@ -155,6 +155,7 @@ padding:5px;
 #menu{
   height: 35px;
   padding: 0;
+  float: left;
 }
 #menu li{
   display: inline;
@@ -173,4 +174,10 @@ padding:5px;
   color:brown;
   text-decoration: underline;
   
+}
+
+.search_bar{ 
+  float: right;
+  margin:5px;
+  padding:10px;
 }

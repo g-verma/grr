@@ -38,10 +38,56 @@ include("includes/connection.php");
                 
                 ?>
             </ul>
+            <!-- search bar  -->
+            <div class="search_bar">
+                <form method="get" action="results.php" id="form1">
+                    <input type="text" name="user_query" placeholder="search here" />
+                    <input type="submit" name="search" value="search" />
+                    
+                    
+                </form>
+            </div>
+            
         </div>
     </div>
 </div>
-<h1>Welcome New User! <?php echo $_SESSION['user_email']; ?></h1>
+<h1>Welcome, <?php echo $_SESSION['user_email']; ?></h1>
+
+<div class="content">
+    <div class="user_timeline">
+        <div class="user_details">
+            <!-- fetching details of the user from database but only those user which is logged in -->
+            <?php
+            
+            $user =$_SESSION['user_email'];
+            
+            $get_user = "select * from users where user_email='$user'";
+            $run_user = mysqli_query($con,$get_user);
+            
+            $row=mysqli_fetch_array($run_user);
+            
+            $user_id=$row['user_id'];
+            $user_name=$row['user_name'];
+            $user_country=$row['user_country'];
+            $user_image=$row['user_image'];
+            $register_date=$row['register_date'];
+            $last_login=$row['last_login'];
+            
+            
+            echo "
+            <p><img src='user/user_images/$user_image' width='200' height='200' /></p>
+            <p>name: $user_name</p>
+            <p>country: $user_country</p>
+            <p>Last Login: $last_login</p>
+            <p>member since: $register_date</p>
+            
+            ";
+            
+            ?>
+            
+        </div>
+    </div>
+</div>
 
 
 </body>
