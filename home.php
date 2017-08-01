@@ -90,6 +90,16 @@ include("includes/connection.php");
             ?>
             
         </div>
+        
+         <div class="user_posts"> 
+              <form action="home.php?id=<?php echo $user_id; ?>" method="post" id="f">
+                  
+                  <h2> whats on your mind</h2>
+                  <input type="text" name="title" placeholder="Write something cool"/> <br>
+                  <textarea cols="70" rows="4" name="content" > </textarea>
+              </form>
+         
+         </div>
     </div>
 </div>
 

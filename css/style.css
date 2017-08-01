@@ -137,3 +137,14 @@ padding:5px;
 
 .footer h5{text-align:center;}
 
+.user_details{float:left; 
+width:30%;
+  
+}
+
+.user_posts{
+  float:right; 
+width:70%;
+  
+}
+
