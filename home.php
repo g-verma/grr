@@ -80,6 +80,10 @@ include("includes/connection.php");
             <p>country: $user_country</p>
             <p>Last Login: $last_login</p>
             <p>member since: $register_date</p>
+            <p><a href='my_messages.php'>Messages</a></p>
+            <p><a href='my_posts.php'>My Posts</a></p>
+            <p><a href='edit_profile.php'>Edit My Account</a></p>
+            <p><a href='logout.php'>Logout</a></p>
             
             ";
             
