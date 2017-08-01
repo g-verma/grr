@@ -102,15 +102,16 @@ include("functions/functions.php");
                   
                   <h2> whats on your mind</h2>
                   <input type="text" name="title" placeholder="Write something cool"  size="90" /> <br>
-                  <textarea cols="70" rows="4" name="content" > Write description</textarea></br>
+                  <textarea cols="70" rows="4" name="content" placeholder=" Write description" ></textarea></br>
                   <select name="topic">
                       <option>Select topic</option>
                       <?php getTopics(); ?>
                   </select>
                   <input type="submit" name="sub" value="post to timeline"/>
               </form>
+              <?php insertPost() ?>
               
-              <div class="posts">
+              <div id="posts">
                   
                   
               </div>
