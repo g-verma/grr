@@ -2,6 +2,7 @@
 
 session_start();
 include("includes/connection.php");
+include("functions/functions.php");
 
 ?>
 
@@ -45,6 +46,7 @@ include("includes/connection.php");
                     <input type="submit" name="search" value="search" />
                     
                     
+                    
                 </form>
             </div>
             
@@ -54,7 +56,9 @@ include("includes/connection.php");
 <h1>Welcome, <?php echo $_SESSION['user_email']; ?></h1>
 
 <div class="content">
-    <div class="user_timeline">
+    
+    
+    <div class="user_timeline" style="float:left; width:30%; padding-left:30px;">
         <div class="user_details">
             <!-- fetching details of the user from database but only those user which is logged in -->
             <?php
@@ -90,17 +94,31 @@ include("includes/connection.php");
             ?>
             
         </div>
-        
-         <div class="user_posts"> 
+    </div>
+    
+    <!-- user post timeline -->
+            <div class="user_posts" style="float:right; width:65%">
               <form action="home.php?id=<?php echo $user_id; ?>" method="post" id="f">
                   
                   <h2> whats on your mind</h2>
-                  <input type="text" name="title" placeholder="Write something cool"/> <br>
-                  <textarea cols="70" rows="4" name="content" > </textarea>
+                  <input type="text" name="title" placeholder="Write something cool"  size="90" /> <br>
+                  <textarea cols="70" rows="4" name="content" > Write description</textarea></br>
+                  <select name="topic">
+                      <option>Select topic</option>
+                      <?php getTopics(); ?>
+                  </select>
+                  <input type="submit" name="sub" value="post to timeline"/>
               </form>
+              
+              <div class="posts">
+                  
+                  
+              </div>
          
-         </div>
-    </div>
+            </div>
+        
+    
+    
 </div>
 
 
