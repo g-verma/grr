@@ -44,6 +44,8 @@ function insertPost(){
         if($run)
         {
             echo "successfully posted on  timeline";
+            $update="update users set posts ='yes' where user_id='$user_id'";
+            $run_update=mysqli_query($con,$update);
             
         }
         
@@ -89,12 +91,15 @@ function get_posts(){
         echo "<div id='posts'>
                 <p> <img src='user/user_images/$user_image' width='50' height='50'></p>
                 <h3><a href='userprofile.php?user_id=$user_id'>$user_name</a></h3>
-                
-        
-        
+                <h3>$post_title</h3>
+                <p>$post_date</p>
+                <p>$content</p>
+                <a href='single.php?post_id=$post_id' style='float:right;'><button>See replies or reply to this post</button></a>
+                </div>
         ";
-        
     }
+    
+    include("pagination.php");
     
     
 }
